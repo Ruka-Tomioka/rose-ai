@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
-import { GetGraceTodayResponse } from "../_lib/schemas";
-import { dailyPractices } from "../_lib/daily-practices";
+import { GetGraceTodayResponse } from "../_lib/schemas.js";
+import { dailyPractices } from "../_lib/daily-practices.js";
 
 export default function handler(req: VercelRequest, res: VercelResponse): void {
   if (req.method !== "GET") {
