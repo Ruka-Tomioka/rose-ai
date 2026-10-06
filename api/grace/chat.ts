@@ -1,18 +1,18 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import OpenAI from "openai";
 
-import { SendGraceChatBody, SendGraceChatResponse } from "../_lib/schemas";
-import { ROSE_SYSTEM_PROMPT } from "../_lib/prompt";
-import { hasCrisisSignal } from "../_lib/crisis";
+import { SendGraceChatBody, SendGraceChatResponse } from "../_lib/schemas.js";
+import { ROSE_SYSTEM_PROMPT } from "../_lib/prompt.js";
+import { hasCrisisSignal } from "../_lib/crisis.js";
 import {
   GRACE_SCOPE_BYPASS_PATTERNS,
   GRACE_SCOPE_DECLINES,
   GRACE_SCOPE_RULES,
-} from "../_lib/grace-scope";
+} from "../_lib/grace-scope.js";
 import {
   countryFromIp,
   resourcesForCountry,
-} from "../_lib/support-resources";
+} from "../_lib/support-resources.js";
 
 const CHAT_ERROR =
   "I can't reach my words right now - please try again in a moment.";
